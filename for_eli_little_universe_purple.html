@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f2edff">
+<title>For Eli, Always ♡</title>
+<style>
+:root{--pink:#b9a0ff;--rose:#8b5cf6;--cream:#fff9f6;--ink:#684657;--muted:#8a7aa5;--lav:#d9cbff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(145deg,#f2edff,#fbf8ff 52%,#f0eaff);min-height:100vh;overflow-x:hidden}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #b7a0ff;outline-offset:4px}
+#floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.floaty{position:absolute;bottom:-45px;opacity:.42;animation:rise linear infinite}@keyframes rise{to{transform:translateY(-115vh) rotate(30deg);opacity:0}}
+.wrap{position:relative;z-index:1;max-width:1000px;margin:auto;padding:22px 18px 55px}nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 4px 20px}.logo{font-weight:900;color:var(--rose);letter-spacing:.03em}.tiny{font-size:.86rem;color:var(--muted)}
+.hero{text-align:center;padding:43px 15px 38px}.pill{display:inline-block;background:#fff;border:1px solid #e7dcff;border-radius:999px;padding:9px 15px;font-size:.86rem;box-shadow:0 5px 20px #8b5cf612}h1{font-size:clamp(2.7rem,8vw,5.4rem);line-height:1.02;letter-spacing:-.065em;margin:23px auto 17px;max-width:850px}h1 em{font-family:Georgia,serif;font-weight:500;color:var(--rose)}.hero p{max-width:590px;margin:auto;color:var(--muted);font-size:1.08rem;line-height:1.8}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{border:0;border-radius:999px;padding:13px 20px;font-weight:800;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 20px #8b5cf618}.btn:hover{transform:translateY(-3px)}.primary{background:var(--rose);color:white}.secondary{background:#fff;color:var(--rose);border:1px solid #dfd2ff}
+.music{max-width:700px;margin:0 auto 28px;padding:17px 20px;background:#ffffffc9;border:1px solid #fff;border-radius:22px;display:flex;align-items:center;gap:15px;box-shadow:0 12px 30px #6f55a010}.vinyl{width:48px;height:48px;flex:none;border-radius:50%;background:repeating-radial-gradient(circle,#60435c 0 3px,#342936 4px 6px);display:grid;place-items:center;color:#fff;font-size:1.1rem}.music-copy{flex:1;min-width:0}.music-copy b{display:block}.music-copy span{font-size:.84rem;color:var(--muted)}.music .btn{padding:10px 15px;white-space:nowrap}.music small{display:block;color:var(--muted);font-size:.78rem;margin-top:5px}
+.section-title{text-align:center;margin:42px 0 20px;font-size:clamp(1.4rem,4vw,1.8rem);letter-spacing:-.03em}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:#ffffffd4;border:1px solid #fff;box-shadow:0 14px 35px #6f55a010;border-radius:24px;padding:23px 20px;min-height:170px}.emoji{font-size:2rem}.card h3{margin:12px 0 8px}.card p{margin:0;line-height:1.7;color:var(--muted);font-size:.95rem}
+.photo-note{max-width:780px;margin:25px auto 0;border-radius:26px;padding:10px;background:linear-gradient(135deg,#e5dcff,#e5dcff)}.photo-inner{border-radius:20px;background:#fffaff;padding:26px;text-align:center}.photo-inner p{line-height:1.8;color:var(--muted);max-width:620px;margin:10px auto}.photo-placeholder{border:1.5px dashed #c7b3ff;border-radius:18px;padding:22px;margin:15px auto 4px;max-width:500px;background:#faf7ff;color:#8b78a8}.photo-placeholder input{max-width:100%;margin-top:12px}
+.letter{margin:25px auto 0;max-width:780px;background:linear-gradient(135deg,#fff,#f2edff);border:1px solid #e7dcff;border-radius:28px;padding:30px;text-align:center;box-shadow:0 18px 45px #6f55a010}.letter p{font-family:Georgia,serif;font-size:1.13rem;line-height:1.9;margin:13px auto;max-width:650px}.secret{display:none;margin-top:18px;background:#fff;border:1px dashed #b9a0ff;border-radius:18px;padding:20px;line-height:1.85}.secret.show{display:block;animation:pop .35s ease}@keyframes pop{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:760px;margin:auto}.reason{background:#fff;border:1px solid #eee7ff;border-radius:16px;padding:16px;text-align:left;color:#695780;line-height:1.6}.reason b{color:var(--rose);margin-right:7px}
+.timeline{max-width:720px;margin:auto;display:grid;gap:12px}.moment{display:flex;gap:15px;align-items:flex-start;background:#ffffffc9;border:1px solid white;border-radius:18px;padding:17px}.moment .emoji{font-size:1.5rem}.moment p{margin:4px 0 0;color:var(--muted);line-height:1.65}
+.question{text-align:center;margin:42px auto 10px;background:#f2edff;border:1px solid #ddd0ff;border-radius:26px;padding:28px 18px;max-width:720px}.question h2{margin:0 0 8px}.question p{color:#8170a6}.answer-buttons{display:flex;justify-content:center;gap:12px;margin-top:18px;flex-wrap:wrap}#response{min-height:30px;margin-top:18px;color:#7650bd;font-weight:800;line-height:1.7}footer{text-align:center;padding:35px 10px 0;color:#9a8caf;font-size:.9rem;line-height:1.8}.heart{display:inline-block;animation:beat 1s infinite}@keyframes beat{50%{transform:scale(1.2)}}
+.modal{position:fixed;inset:0;background:#35204d77;display:none;align-items:center;justify-content:center;padding:18px;z-index:5}.modal.show{display:flex}.modal-inner{max-width:440px;width:100%;background:#faf7ff;border-radius:28px;padding:30px;text-align:center;box-shadow:0 25px 90px #21123644}.modal-inner .big{font-size:3rem}.modal-inner h2{color:var(--rose)}.modal-inner p{line-height:1.8;color:#77658f}
+@media(max-width:650px){.cards{grid-template-columns:1fr}.card{min-height:0}.reasons{grid-template-columns:1fr}.hero{padding-top:25px}.letter{padding:23px 18px}.music{flex-wrap:wrap}.music .btn{margin-left:60px}nav .tiny{max-width:130px;text-align:right}}
+</style>
+</head>
+<body>
+<div id="floaties" aria-hidden="true"></div>
+<div class="wrap">
+<nav><div class="logo">♡ eli's little universe</div><div class="tiny">a small place, just for you</div></nav>
+<header class="hero">
+<div class="pill">✿ made with love for Eli ✿</div>
+<h1>In every version of my world,<br>I'd still find <em>you.</em></h1>
+<p>Hi, Eli. This little corner of the internet is yours—a tiny reminder that you are loved on the loud days, the quiet days, and every ordinary day in between. ♡</p>
+<div class="buttons"><button class="btn primary" onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">Read your letter 💌</button><button class="btn secondary" onclick="openModal()">Open a little surprise ✨</button></div>
+</header>
+
+<section class="music" aria-label="Song player">
+<div class="vinyl">♫</div><div class="music-copy"><b>our little soundtrack</b><span>“Last Night on Earth” — Green Day</span><small id="musicStatus">Tap play to listen on YouTube. Music may need your permission to open.</small></div>
+<button class="btn primary" onclick="playSong()">▶ Play song</button>
+</section>
+
+<h2 class="section-title">Little things I adore about you 🌷</h2>
+<section class="cards">
+<article class="card"><div class="emoji">☀️</div><h3>Your presence</h3><p>You make even an ordinary day feel like something I want to remember.</p></article>
+<article class="card"><div class="emoji">🧸</div><h3>Your little ways</h3><p>The tiny things you do, the way you talk, and the parts of you you might not notice mean so much to me.</p></article>
+<article class="card"><div class="emoji">🌙</div><h3>The way we are</h3><p>We don't have to be the same to fit together. I love learning how to understand your world.</p></article>
+</section>
+
+<section class="photo-note"><div class="photo-inner">
+<div class="emoji">📸💗</div><h2>Our little memory corner</h2><p>Every love story has tiny moments that become big memories. Add a favorite photo of you two here—it stays in this page while you have it open.</p>
+<div class="photo-placeholder"><label for="photoUpload">Choose a photo to make this page yours ♡</label><br><input id="photoUpload" type="file" accept="image/*" onchange="showPhoto(event)"><div id="photoPreview"></div></div>
+</div></section>
+
+<section class="letter" id="letter">
+<div class="emoji">💌</div><h2>For Eli, with all my heart</h2>
+<p>Hi, my love.</p>
+<p>If I could give you one thing, it would be the chance to see yourself through my eyes. Maybe then you'd understand why the little things about you mean so much to me, why your presence can make a hard day feel lighter, and why I'm grateful that out of all the people in this world, I get to know you this closely.</p>
+<p>We're different in our own ways, but I don't want us to be copies of each other. I love the way we are—the things we share, the things we have to learn about each other, and the way we keep finding our way back to one another. I want to keep making memories with you, from the simplest conversations to hugs I wish could last a little longer.</p>
+<p>You don't have to be perfect for me, Eli. You can be tired, quiet, worried, or unsure. You never have to pretend that everything is okay just to be loved. I hope I can be someone you can rest with, laugh with, be honest with, and feel safe beside.</p>
+<p>And if the world ever gets too loud, come back to this little page. Let it remind you that you matter to me—not because of what you do for me, but because you're you. I'm so glad you're here. I'm so glad it's you. <span class="heart">♡</span></p>
+<button class="btn primary" onclick="toggleSecret()">Psst… there's a secret message</button>
+<div class="secret" id="secret">Eli, if I could pause time during one of our hugs, I probably would—not because I want the world to stop forever, but because some moments feel too precious to rush through. Here's to more hugs, more laughter, more growing together, and more ordinary days that become our favorite memories. I love you. 💗</div>
+</section>
+
+<h2 class="section-title">Reasons I'd keep choosing you 💗</h2>
+<section class="reasons">
+<div class="reason"><b>01.</b> You make me smile without even trying.</div><div class="reason"><b>02.</b> I get to discover new little things about you.</div>
+<div class="reason"><b>03.</b> I love us, even in the ways we're different.</div><div class="reason"><b>04.</b> There's still so much life and so many memories ahead of us.</div>
+<div class="reason"><b>05.</b> Your hugs make me wish the moment could last longer.</div><div class="reason"><b>06.</b> Loving you is something I want to keep choosing.</div>
+</section>
+
+<h2 class="section-title">A few promises, softly made 🫶</h2>
+<section class="timeline">
+<div class="moment"><div class="emoji">🌱</div><div><b>I'll keep learning you.</b><p>Not assume I know everything, but listen, ask, and understand you a little better each day.</p></div></div>
+<div class="moment"><div class="emoji">☂️</div><div><b>I'll make room for your hard days.</b><p>You don't need to be cheerful all the time. You can tell me when things feel heavy.</p></div></div>
+<div class="moment"><div class="emoji">🌷</div><div><b>I'll celebrate the little things.</b><p>Small wins, silly jokes, random updates, and the everyday moments that make our story ours.</p></div></div>
+</section>
+
+<section class="question"><div class="emoji">🐻‍❄️💕</div><h2>One very important question, Eli…</h2><p>Will you let me keep loving you and annoying you with affection?</p>
+<div class="answer-buttons"><button class="btn primary" onclick="answerYes()">YES, OBVIOUSLY ♡</button><button class="btn secondary" id="noBtn" onclick="answerNo()">hmm… no?</button></div><div id="response" aria-live="polite"></div></section>
+<footer>made for Eli, by someone very lucky to love her <span class="heart">♥</span><br><span class="tiny">P.S. Come back whenever you need a little reminder. This page is always on your side.</span></footer>
+</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="A tiny surprise" onclick="if(event.target===this)closeModal()"><div class="modal-inner"><div class="big">💐</div><h2>Surprise, Eli!</h2><p>If I could, I'd bring you your favorite flowers, pull you into a long hug, and tell you in person how much you mean to me.</p><p><b>Until then, here's a pocket-sized hug. 🫂</b></p><button class="btn primary" onclick="closeModal()">Hug accepted ♡</button></div></div>
+<script>
+const floaties=document.getElementById('floaties'),symbols=['♡','♥','✿','୨୧','✧'];
+for(let i=0;i<24;i++){const el=document.createElement('span');el.className='floaty';el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+'%';el.style.fontSize=(14+Math.random()*22)+'px';el.style.animationDuration=(10+Math.random()*16)+'s';el.style.animationDelay=(-Math.random()*20)+'s';floaties.appendChild(el)}
+function toggleSecret(){document.getElementById('secret').classList.toggle('show')}
+function openModal(){document.getElementById('modal').classList.add('show')}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function playSong(){window.open('https://www.youtube.com/results?search_query=Green+Day+Last+Night+on+Earth+official+audio','_blank','noopener');document.getElementById('musicStatus').textContent='Opened YouTube search for the song in a new tab ♡'}
+function answerYes(){document.getElementById('response').textContent='YAY, ELI!! This means unlimited hugs, kisses, and being reminded that you are loved. 💋💗';burstHearts()}
+function answerNo(){document.getElementById('noBtn').textContent='are you really sure? 🥺';document.getElementById('response').textContent='Hmm, I think that button needs a little more consideration… 🥹💗'}
+function burstHearts(){for(let i=0;i<22;i++){const h=document.createElement('span');h.textContent=['💗','💕','💖','♡'][i%4];h.style.position='fixed';h.style.left=(8+Math.random()*84)+'%';h.style.top=(45+Math.random()*35)+'%';h.style.fontSize=(18+Math.random()*22)+'px';h.style.zIndex='10';h.style.pointerEvents='none';h.style.transition='transform 1.4s ease, opacity 1.4s ease';document.body.appendChild(h);requestAnimationFrame(()=>{h.style.transform=`translateY(-${80+Math.random()*180}px) rotate(${Math.random()*50-25}deg)`;h.style.opacity='0'});setTimeout(()=>h.remove(),1500)}}
+function showPhoto(e){const file=e.target.files&&e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{const img=document.createElement('img');img.src=reader.result;img.alt='A favorite memory';img.style.cssText='display:block;max-width:100%;max-height:420px;object-fit:contain;border-radius:15px;margin:15px auto 0;box-shadow:0 8px 24px #9b6a8120';const preview=document.getElementById('photoPreview');preview.replaceChildren(img)};reader.readAsDataURL(file)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body></html>
